@@ -50,8 +50,8 @@ public class JaegerServerController {
 
 
 
-        @PostMapping("/trocadenome")
-        public String receberMensagem(@RequestBody String novonome, Integer cpf) {
+        @PostMapping("/trocadenome/{cpf}")
+        public String receberMensagem(@RequestBody String novonome, @PathVariable Integer cpf) {
         String retorno;
         Pessoa pessoa = new Pessoa();
         if (cpf.equals(pessoa.getCpf())){
