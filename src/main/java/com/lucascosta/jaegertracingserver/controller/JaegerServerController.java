@@ -39,15 +39,13 @@ public class JaegerServerController {
         pessoaOutraApi1.setSobreNome(pessoa.getSobreNome());
         pessoaOutraApi1.setIdade(pessoa.getIdade());
 
-        apiDeOutraPessoa(pessoaOutraApi1);
-
         return pessoa.getSobreNome();
     }
 
     @GetMapping("/xpto")
-    public String apiDeOutraPessoa(@RequestBody PessoaOutraApi lucas){
+    public Pessoa apiDeOutraPessoa(){
 
-        return lucas.getSobreNome();
+        return new Pessoa();
     }
 
 

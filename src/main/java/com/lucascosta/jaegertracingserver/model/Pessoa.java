@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public class Pessoa {
-    String nome;
-    String sobreNome;
-    Integer idade;
-    String regiao;
+    String nome = "Lucas";
+    String sobreNome = "Dealis";
+    Integer idade = 20;
+    String regiao = "Teotonio";
 }
