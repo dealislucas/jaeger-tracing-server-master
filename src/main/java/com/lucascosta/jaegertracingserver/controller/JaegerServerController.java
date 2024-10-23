@@ -50,5 +50,16 @@ public class JaegerServerController {
         return lucas.getSobreNome();
     }
 
+    @RestController
+    public class MeuControlador {
+
+        @PostMapping("/mensagem")
+        public String receberMensagem(@RequestBody String mensagem) {
+            return "Você enviou: " + mensagem;
+        }
+    }
+
+
+
 }
 
