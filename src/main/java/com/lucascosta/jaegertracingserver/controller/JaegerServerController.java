@@ -4,6 +4,8 @@ import com.lucascosta.jaegertracingserver.model.Pessoa;
 import com.lucascosta.jaegertracingserver.model.PessoaOutraApi;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigInteger;
+
 @RestController
 @RequestMapping("/meuNome")
 public class JaegerServerController {
@@ -50,12 +52,12 @@ public class JaegerServerController {
 
 
 
-        @PostMapping("/trocadenome/{cpf}")
-        public String receberMensagem(@RequestBody String novonome, @PathVariable Integer cpf) {
+        @PostMapping("/trocadenome")
+        public String receberMensagem(@RequestBody Pessoaentrada objeto) {
         String retorno;
-        Pessoa pessoa = new Pessoa();
-        if (cpf.equals(pessoa.getCpf())){
-            retorno = "Seu nome foi alterado para: " + novonome;
+        Pessoa xpto = new Pessoa();
+        if (objeto.getCpf().equals(xpto.getCpf())){
+            retorno = "Seu nome foi alterado para: " + objeto.getNome();
         } else {
             retorno = "O cpf digitado esta errado";
         }
