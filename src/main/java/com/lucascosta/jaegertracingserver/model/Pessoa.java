@@ -8,4 +8,5 @@ public class Pessoa {
     String sobreNome = "Dealis";
     Integer idade = 20;
     String regiao = "Teotonio";
+    Integer cpf = 123456789;
 }

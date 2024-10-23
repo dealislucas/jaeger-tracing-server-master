@@ -52,7 +52,14 @@ public class JaegerServerController {
 
         @PostMapping("/trocadenome")
         public String receberMensagem(@RequestBody String novonome, Integer cpf) {
-            return "Seu nome foi alterado para "+ novonome;
+        String retorno;
+        Pessoa pessoa = new Pessoa();
+        if (cpf.equals(pessoa.getCpf())){
+            retorno = "Seu nome foi alterado para: " + novonome;
+        } else {
+            retorno = "O cpf digitado esta errado";
+        }
+            return retorno;
         }
     }
 
