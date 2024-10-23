@@ -50,8 +50,7 @@ public class JaegerServerController {
         return lucas.getSobreNome();
     }
 
-    @RestController
-    public class MeuControlador {
+
 
         @PostMapping("/mensagem")
         public String receberMensagem(@RequestBody String mensagem) {
@@ -61,5 +60,5 @@ public class JaegerServerController {
 
 
 
-}
+
 
