@@ -42,7 +42,7 @@ public class JaegerServerController {
         return pessoa.getSobreNome();
     }
 
-    @GetMapping("/xpto")
+    @GetMapping("/naosei")
     public Pessoa apiDeOutraPessoa(){
 
         return new Pessoa();
@@ -50,9 +50,9 @@ public class JaegerServerController {
 
 
 
-        @PostMapping("/mensagem")
-        public String receberMensagem(@RequestBody String mensagem) {
-            return "Você enviou: " + mensagem;
+        @PostMapping("/trocadenome")
+        public String receberMensagem(@RequestBody String novonome, Integer cpf) {
+            return "Seu nome foi alterado para "+ novonome;
         }
     }
 
